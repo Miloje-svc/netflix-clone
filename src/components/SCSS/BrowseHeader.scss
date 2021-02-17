@@ -1,0 +1,65 @@
+@import "../../SCSS/colors.scss";
+@import "../../SCSS/utils.scss";
+
+.browse__header {
+  @include FLEX;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: transparent;
+  position: sticky;
+
+  .header__left {
+    img {
+      cursor: pointer;
+      width: 100px;
+    }
+  }
+
+  .header__middle {
+    flex: 1;
+    z-index: 999 !important;
+
+    form {
+      input {
+        width: 50%;
+        outline: none;
+        border: none;
+        height: 100%;
+        cursor: pointer;
+        transform: translateX(50%);
+        margin: auto;
+        color: $white;
+        padding: 0.5rem 1rem;
+        border-radius: $border-radius;
+        background-color: $lightgrey;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .header__right {
+    @include FLEX;
+
+    .header__profile {
+      @include FLEX;
+      position: relative;
+
+      img {
+        width: 30px;
+        margin: 0 0.2rem 0 1rem;
+        cursor: pointer;
+      }
+    }
+
+    .MuiSvgIcon-root {
+      color: $white;
+      width: 30px !important;
+      height: 30px !important;
+      cursor: pointer;
+    }
+  }
+}

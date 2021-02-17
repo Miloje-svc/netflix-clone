@@ -1,0 +1,73 @@
+@import "../../SCSS/colors.scss";
+@import "../../SCSS/utils.scss";
+
+.banner {
+  margin-top: -5rem;
+
+  img {
+    width: 100%;
+    display: block;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .banner__info {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    margin-left: 2rem;
+    color: white;
+    max-width: 400px;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  .play__btn {
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: $white;
+    background-color: $red;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border-radius: $border-radius;
+  }
+}
+
+@media (max-width: 800px) {
+  .banner__info {
+    h1 {
+      font-size: 2rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .banner__info {
+    h1 {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+      font-size: 0.8rem !important;
+      font-weight: 300 !important;
+    }
+  }
+}

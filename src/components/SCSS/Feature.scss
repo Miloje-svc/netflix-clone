@@ -1,0 +1,129 @@
+@import "../../SCSS/colors.scss";
+@import "../../SCSS/utils.scss";
+
+.feature {
+  width: 100%;
+  position: relative;
+
+  .feature__content {
+    @include FLEX;
+    justify-content: space-around;
+    max-width: 1500px;
+    width: 100%;
+    padding: 70px 45px;
+    margin: auto;
+
+    .feature__left {
+      color: white;
+      width: 100%;
+      max-width: 400px;
+
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: $border-radius;
+        outline: none;
+        border: none;
+        background-color: $red;
+        cursor: pointer;
+        color: white;
+        margin-top: 2rem;
+      }
+    }
+
+    .feature__middle {
+      background-color: red !important;
+      min-width: 50px;
+    }
+
+    .feature__rigth {
+      img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .feature__close--btn {
+    @include GRID;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 100ms ease-in-out;
+
+    &:hover {
+      background-color: $lightgrey;
+    }
+
+    .MuiSvgIcon-root {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .feature__content {
+    flex-direction: column;
+  }
+
+  .feature__rigth {
+    img {
+      margin-top: 2rem !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .feature__left {
+    h1 {
+      font-size: 1.8rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .feature__content {
+    padding: 50px 15px !important;
+  }
+
+  .feature__left {
+    h1 {
+      font-size: 1.4rem !important;
+    }
+
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+
+  .feature__close--btn {
+    width: 30px !important;
+    height: 30px !important;
+
+    .MuiSvgIcon-root {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+}

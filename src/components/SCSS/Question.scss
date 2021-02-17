@@ -1,0 +1,47 @@
+@import "../../SCSS/colors.scss";
+@import "../../SCSS/utils.scss";
+
+.questions__container {
+  margin-top: 2rem;
+
+  .question__content {
+    width: 100%;
+    max-width: 815px;
+    margin: auto;
+
+    .question__header {
+      @include FLEX;
+      margin-bottom: 2px;
+      cursor: pointer;
+      color: $white;
+      justify-content: space-between;
+      padding: 0.8em 2.2em 0.8em 1.2em;
+      background-color: $gray;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      .MuiSvgIcon-root {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    }
+
+    .questions {
+      color: $white;
+      margin: 0 auto 8px auto;
+      padding: 1.2em;
+      background-color: $gray;
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      p:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

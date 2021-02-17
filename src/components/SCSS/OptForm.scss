@@ -1,0 +1,60 @@
+@import "../../SCSS/colors.scss";
+@import "../../SCSS/utils.scss";
+
+.optform {
+  width: 100%;
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $white;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .optform__container {
+    @include FLEX;
+    border-radius: $border-radius;
+    max-width: 815px;
+    height: 70px;
+    width: 100%;
+    margin: 1rem auto;
+
+    input {
+      cursor: pointer;
+      min-height: 70px;
+      width: 55%;
+      border: none;
+      outline: none;
+      padding: 0 1rem;
+    }
+
+    button {
+      @include FLEX;
+      cursor: pointer;
+      height: 70px;
+      color: white;
+      width: 45%;
+      border: none;
+      font-size: 1.875rem;
+      outline: none;
+      background-color: $red;
+      padding: 0 1rem;
+
+      .MuiSvgIcon-root {
+        margin-left: 0.2rem;
+        font-size: 2.7rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .optform__container {
+    flex-direction: column;
+
+    input {
+      min-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "../../SCSS/colors.scss";
+@import "../../SCSS/utils.scss";
+
+.form {
+  padding: 60px 68px 40px;
+  margin-bottom: 90px;
+  min-height: 660px;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .title {
+    color: $white;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+
+  .form__container {
+    max-width: 335px;
+  }
+
+  form {
+    @include FLEX;
+    flex-direction: column;
+
+    div {
+      @include FLEX;
+      justify-content: space-between;
+      border-radius: $border-radius;
+      width: 100%;
+      background-color: #333333;
+      margin-bottom: 1rem;
+      overflow: hidden;
+
+      input {
+        cursor: pointer;
+        background-color: transparent;
+        width: 100%;
+        outline: none;
+        color: $white;
+        height: 50px;
+        border: none;
+        line-height: 50px;
+        padding: 16px 20px;
+      }
+
+      .MuiSvgIcon-root {
+        color: $darkgrey;
+        cursor: pointer;
+        margin-right: 20px;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      background-color: $red;
+      cursor: pointer;
+      color: $white;
+      border-radius: $border-radius;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 24px 0 12px;
+    }
+  }
+
+  .remember__container {
+    @include FLEX;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    div {
+      @include FLEX;
+
+      input {
+        border: none;
+        outline: none;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        margin-right: 0.5rem;
+        border-radius: $border-radius;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $darkgrey;
+      }
+    }
+
+    h4 {
+      color: $darkgrey;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 300;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-color: $darkgrey;
+      }
+    }
+  }
+
+  .fb__link {
+    @include FLEX;
+    margin: 0.5rem 0;
+
+    p {
+      color: $darkgrey;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 0.8rem;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-color: $darkgrey;
+      }
+    }
+  }
+
+  .signUp__container {
+    p {
+      margin: 0.5rem 0;
+      color: $darkgrey;
+      font-size: 0.95rem;
+    }
+  }
+
+  .learn__more {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: $lightgrey;
+  }
+}
